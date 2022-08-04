@@ -1,0 +1,52 @@
+.body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+}
+
+.container div:nth-child(2n){
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.container div:nth-child(2n+1){
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.inside{
+    width: 200px;
+    height: 200px;
+    /* border: solid black 2px; */
+}
+
+/* .one{
+background-color: rgba(0, 0, 0, 0.5)
+}
+.two{
+background-color: rgba(0, 0, 0, 0.5)
+}
+.three{
+    background-color: rgba(0, 0, 0, 0.5)
+}
+.four{
+    background-color: rgba(0, 0, 0, 0.5)
+}
+.five{
+    background-color: rgba(0, 0, 0, 0.5)
+}
+.six{
+    background-color: rgba(0, 0, 0, 0.5)
+}
+.seven{
+    background-color: rgba(0, 0, 0, 0.5)
+}
+.eight{
+    background-color: rgba(0, 0, 0, 0.5)
+}
+.nine{
+    background-color: rgba(0, 0, 0, 0.5)
+} */
