@@ -1,13 +1,21 @@
 .body{
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.player{
+    position :relative;
+    bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
 .container{
     display: grid;
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .container div:nth-child(2n){
@@ -18,9 +26,12 @@
 }
 
 .inside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150px;
     width: 200px;
     height: 200px;
-    /* border: solid black 2px; */
 }
 
 /* .one{
