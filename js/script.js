@@ -8,6 +8,8 @@ const six = document.getElementById('six');
 const seven = document.getElementById('seven');
 const eight = document.getElementById('eight');
 const nine = document.getElementById('nine');
+const divList = document.querySelectorAll(".inside");
+const playerTxt = document.getElementById("player").innerHTML;
 
 function addSign(div){
     if(player === 1){
@@ -27,10 +29,11 @@ function addSign(div){
     div.target.removeEventListener("click", addSign);
 }
 
-const divList = document.querySelectorAll(".inside");
 
-for(const div of divList){
-    div.addEventListener("click", addSign);
+function startGame(){
+    for(const div of divList){
+        div.addEventListener("click", addSign);
+    }
 }
 
 function isWin(){
@@ -47,5 +50,21 @@ function isWin(){
             for(const div of divList){
                 div.removeEventListener("click", addSign);
             }
+            document.getElementById("btn").classList.add("display");
         }
 }
+
+function playAgain(){
+    document.getElementById("btn").addEventListener("click", function(e){
+        for(const div of divList){
+            div.textContent = "";
+        }
+        startGame();
+        document.getElementById("player").innerHTML = playerTxt;
+        document.getElementById("btn").classList.remove("display");
+        player = 1;
+    });
+}
+
+startGame();
+playAgain();

@@ -6,11 +6,27 @@
     align-items: center;
 }
 
-.player{
+.title{
+    display: flex;
     position :relative;
     bottom: 20px;
+}
+
+.player{
     font-size: 24px;
     font-weight: bold;
+}
+
+.btn{
+    display: none;
+    border-radius: 10px;
+    width: 100px;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.display{
+    display: block;
 }
 
 .container{
